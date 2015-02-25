@@ -1,6 +1,11 @@
 describe("it should", function() {
-  it("return a number", function(){
+  it("return 0 for 0", function(){
     var total = solution(0);
+    expect(total).to.be.eql(0);
+  });
+
+  it("return a number", function(){
+    var total = solution(1);
     expect(typeof total).to.be.eql('number');
   });
 
@@ -38,4 +43,10 @@ describe("it should", function() {
     var total = solution(1000000);
     expect(total).to.eql(233333166668);
   });
+
+  it("it should accept massive numbers", function(){
+    var total = solution(50000000);
+    expect(total).to.eql(583333291666668);
+  });
+
 });
